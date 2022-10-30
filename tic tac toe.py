@@ -30,14 +30,15 @@ def place_marker(board, marker, position):
 #for checking the user whether the user win in 8 conditions
 def win_check(board, mark):
 
-    return((board[1]==board[2]== board[3]==mark)or
-           (board[4]==board[5]==board[6]==mark)or
-           (board[7]==board[8]==board[9]==mark)or
-           (board[1]==board[5]==board[9]==mark)or
-           (board[1]==board[4]==board[7]==mark)or
-           (board[3]==board[6]==board[9]==mark)or
-           (board[3]==board[5]==board[7]==mark)or
-           (board[2]==board[5]==board[8]==mark))
+    return((board[1]==board[2]== board[3]==mark)or# across the top
+           (board[4]==board[5]==board[6]==mark)or# across the middle
+             (board[7]==board[8]==board[9]==mark)or #acrooss the bottom
+           (board[1]==board[5]==board[9]==mark)or # down the middle
+           (board[1]==board[4]==board[7]==mark)or #down the middle
+           (board[3]==board[6]==board[9]==mark)or #down the right side
+           (board[3]==board[5]==board[7]==mark)or #diagonal
+           (board[2]==board[5]==board[8]==mark))  #diagonal
+         
 #for random selecting the user for playing
 import random
 
