@@ -1,5 +1,6 @@
 
 #for displaying the board
+
 def display_board(board):
     print('\n'*1)
     print(board[1]+'|'+board[2]+'|'+board[3])
@@ -9,12 +10,15 @@ def display_board(board):
     print(board[7]+'|'+board[8]+'|'+board[9])
 
 #for entering the player input
+
 def player_input():
 
     marker=''
     #To check wheather whether user is entering the corect value
+    
     while marker !='x' and marker !='o':
         marker=input("choose x or o")
+    
     #Assigning the values to the player
 
 
@@ -23,6 +27,7 @@ def player_input():
     else:
         return('o','x')
 #adding user entered marker to the position
+
 def place_marker(board, marker, position):
 
     #for choosing a position where to input
@@ -40,6 +45,7 @@ def win_check(board, mark):
            (board[2]==board[5]==board[8]==mark))  #diagonal
          
 #for random selecting the user for playing
+
 import random
 
 def choose_first():
@@ -52,7 +58,7 @@ def choose_first():
 def space_check(board, position):
 
     return board[position]==" "
-
+#for checking the board is full of values or not
 def full_board_check(board):
 
     for i in range(1,10):
